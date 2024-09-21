@@ -1102,7 +1102,7 @@ function loadContent(projectData) {
 }
 
 // Github data display
-
+/*
 async function getRepoList() {
   try {
     const response = await fetch(
@@ -1114,3 +1114,4 @@ async function getRepoList() {
     console.log(err);
   }
 }
+*/
