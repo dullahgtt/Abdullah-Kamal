@@ -881,81 +881,71 @@ form.addEventListener("submit", handleSubmit);
 
 const projectData = [
   {
-    title: "PassGen",
+    title: "Credit Card Fraud Detection",
     subTitle:
-      "You can easily generate secure and random passwords using this simple tool.",
-    thumbnail: "../img/projects-default.jpg",
+      "Detecting misuse of credit cards using supervised learning",
+    thumbnail: "../img/thumbnails/creditcard.png",
     description:
-      "PassGen is a Python CLI tool for generating secure, random passwords from the command line. It allows you to easily create strong and unique passwords for your accounts, with a variety of customization options. Simply enter a few commands and PassGen will do the rest, providing you with a secure password to use with confidence. Fast and efficient, PassGen is the perfect tool for anyone who needs to generate passwords on the fly.",
+      "Utilized various supervised learning algorithms and oversampling to test the predictability of credit card scams using sample set of registered scams.",
     techStack: ["Python"],
-    srcURL: "https://github.com/LakshanRukantha/PassGen",
+    srcURL: "https://github.com/dullahgtt/Credit-Card-Fraud",
   },
   {
-    title: "CutLink",
-    subTitle: "Here you have full control over your links.",
-    thumbnail: "../img/thumbnails/cutlink-thumbnail.png",
+    title: "Drone Battery Simulator",
+    subTitle: "Carbon footprint tracking of battery consumption in recreation drones.",
+    thumbnail: "../img/thumbnails/dronemotion.png",
     description:
-      "CutLink is a modern and user-friendly web application built with React and Material UI. Our platform offers a complete solution for link shortening. With CutLink, you can create short, branded links that are easy to share. Try CutLink today and experience the power of a smarter link shortning platform!",
-    techStack: ["React", "MUI"],
-    srcURL: "https://cut-link.netlify.app/",
+      "This project was utilized a Rhyze Tech Tello Drone simulation to track battery consumption, predict carbon footprint, and recommend optimal paths using A star based on desired waypoints",
+    techStack: ["Python", "HTML"],
+    srcURL: "https://github.com/dullahgtt/Drone-Battery-Simulator",
   },
   {
-    title: "MindMate",
+    title: "U.S. County Political Perception Drift",
     subTitle:
-      "Unlock the power of your mind with our AI-Driven mental health web application",
-    thumbnail: "../img/thumbnails/mindmate-thumbnail.png",
+      "Reimagining data architecture using sentiment-based analysis.",
+    thumbnail: "../img/thumbnails/politics.png",
     description:
-      "MindMate is a web application that provides mental health solutions using artificial intelligence powered by OpenAI. It is designed to help individuals struggling with mental health issues to improve their well-being and overall quality of life. The app provides personalized and confidential support to users by analyzing their symptoms, emotions, and behavior. MindMate uses advanced algorithms to identify patterns in user data and provide them with tailored recommendations for managing their mental health.",
-    techStack: ["Next.js", "React", "Node.js"],
-    srcURL: "https://mind-mate.vercel.app/",
+      "Utilizing deep learning to understand trend setting in political parties in the United States. Our solution implements oriented hypergraphs to understand the power of sentiment in major elections.",
+    techStack: ["R", "Python", "Latex"],
+    srcURL: "https://drive.google.com/file/d/14fp_IXIruJPljTpX6XQMLYQ1eh_na1Nw/view?usp=sharing",
   },
   {
-    title: "GitTrack",
+    title: "Speaker Diarization via Clustering on CNNs",
     subTitle: "Gain insights and strengthen your GitHub connections",
-    thumbnail: "../img/thumbnails/gittrack-thumbnail.png",
+    thumbnail: "../img/thumbnails/diarization.png",
     description:
-      "GitTrack - an innovative web application designed to empower GitHub users with powerful network analysis tools. With GitTrack, you can effortlessly track and analyze your followers, identifying those who are not reciprocating the follow. Take control of your GitHub presence, strengthen your connections, and optimize your network. Gain valuable insights and make informed decisions to build a strong and engaged community.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    srcURL: "https://gittrack.vercel.app/",
+      "A research project designed to analyze various clustering methods to enhance speaker recognition for video transcription. We primarily are utilizing convolutional neural networks and PCA-Kmeans to predict speakers in various audio settings.",
+    techStack: ["MATLAB", "Latex", "Python"],
+    srcURL: "https://drive.google.com/file/d/1_B_lcpMaqaZvfPYVrNL5sT04e1DRJnAC/view?usp=sharing",
   },
   {
-    title: "My Battery",
+    title: "Image Recognition for Detecting Misinformation (IRDM)",
     subTitle:
-      "Simple website that display the battery status of your device and the charging status.",
-    thumbnail: "../img/thumbnails/my-battery-thumbnail.png",
+      "Dynamic solution for detecting fake news on X (Formerly Twitter).",
+    thumbnail: "../img/thumbnails/fakenews.jpg",
     description:
-      "My Battery is a simple and minimalistic web application that displays your battery percentage, charging status, and whether the battery is low or full. It's important to note that this is a website-based application.",
-    techStack: ["JavaScript", "HTML", "Tailwind CSS", "CSS"],
-    srcURL: "https://mybattery.vercel.app/",
+      "IRDM was designed to enhance fake news detection using a web scraper to cross-reference information with news outlet databases.",
+    techStack: ["Python", "HTML", "CSS"],
+    srcURL: "https://drive.google.com/file/d/1ePYC9a41d9iquCqAvahFDwT0aZDEd0-P/view",
   },
   {
-    title: "SysInfo",
-    subTitle: "Web based terminal emulator",
-    thumbnail: "../img/thumbnails/sys-info-thumbnail.png",
+    title: "Regulating Autonomous Drone Fly-Overs Via Authorization-based Zoning​",
+    subTitle: "Security-based drone delivery system.",
+    thumbnail: "../img/thumbnails/drone2.png",
     description:
-      "SysInfo is a web based terminal emulator which you can run basic commands like help, clear, battery, weather and etc.",
-    techStack: ["JavaScript", "HTML", "CSS", "Tailwind CSS"],
-    srcURL: "https://sys-info.vercel.app/",
+      "ABAC Android application designed to support private property protection for drone flyovers in urban areas.",
+    techStack: ["Java", "JavaScript", "Python", "PHP", "Powershell", "Shell", "HTML", "CSS", "SCSS"],
+    srcURL: "https://github.com/dullahgtt/REU-2022",
   },
   {
-    title: "Project Title",
+    title: "Cleetus: The Insult Bot",
     subTitle:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima nobis quia et.",
-    thumbnail: "../img/projects-default.jpg",
+      "API-integrated insult-generating chat bot.",
+    thumbnail: "../img/thumbnails/lovenothate.jpg",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi placeat magnam eveniet accusamus tenetur maxime aspernatur deleniti rerum praesentium ducimus minima facilis consectetur expedita, mollitia molestias qui dolorem quam laudantium. Repellendus sunt harum fugiat natus. dolor sit amet consectetur, adipisicing elit. Minima nobis quia et.",
-    techStack: ["Stack"],
-    srcURL: "",
-  },
-  {
-    title: "Project Title",
-    subTitle:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima nobis quia et.",
-    thumbnail: "../img/projects-default.jpg",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi placeat magnam eveniet accusamus tenetur maxime aspernatur deleniti rerum praesentium ducimus minima facilis consectetur expedita, mollitia molestias qui dolorem quam laudantium. Repellendus sunt harum fugiat natus. dolor sit amet consectetur, adipisicing elit. Minima nobis quia et.",
-    techStack: ["Stack"],
-    srcURL: "",
+      "A web based application designed for humorous generation of insults.",
+    techStack: ["Python", "HTML", "CSS", "React", "SQLAlchemy"],
+    srcURL: "https://github.com/dullahgtt/Friendly-Chat-Bot",
   },
 ];
 
@@ -984,8 +974,7 @@ function loadContent(projectData) {
        <div class='content'>{description}</div>
        <div class='technologies'>Tech Stack: ${techStackData}</div>
        <div class="card-buttons">
-          <a href="https://github.com/dullahgtt" target="_blank" class="card-btn" style="float: right; height: 2.35rem; color: #fff; background-color: #68d372; padding: .375rem .75rem; border-radius: .25rem;"><i class="fa-regular fa-file-code"></i>Source Code</a>
-          <a href="{srcURL}" target="_blank" class="card-btn" style="float: right; color: #fff; background-color: #68d372; padding: .375rem .75rem; border-radius: .25rem;"><i class="fa-solid fa-display"></i>View Demo</a>
+          <a href="{srcURL}" target="_blank" class="card-btn" style="float: right; color: #fff; background-color: hsl(194, 94%, 49%); padding: .375rem .75rem; border-radius: .25rem;"><i class="fa-solid fa-display"></i>View Project</a>
       </div>`,
       data
     );
