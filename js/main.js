@@ -1090,6 +1090,47 @@ function loadContent(projectData) {
   });
 }
 
+function openPopup(popupId) {
+  const modal = document.getElementById('popup-modal');
+  const image = document.getElementById('popup-image');
+  const details = document.getElementById('popup-details');
+
+  // Set image and details based on the popupId
+  switch (popupId) {
+    case 'gdsc-popup':
+      image.src = 'img/icon/gdsc-details.png'; 
+      details.innerText = 'Details about GDSC...';
+      break;
+    case 'siam-popup':
+      image.src = 'img/icon/siam-details.png';
+      details.innerText = 'Details about SIAM...';
+      break;
+    case 'bokohacks-popup':
+      image.src = 'img/icon/bokohacks-details.png';
+      details.innerText = 'Details about Boko Hacks...';
+      break;
+    case 'jrmf-popup':
+      image.src = 'img/icon/jrmf-details.png';
+      details.innerText = 'Details about JRMF...';
+        break;
+    case 'launchpad-popup':
+      image.src = 'img/icon/launchpad-details.png';
+      details.innerText = 'Details about CS Launchpad...';
+        break;
+    default:
+      image.src = '';
+      details.innerText = '';
+  }
+
+  modal.style.display = 'block';
+}
+
+function closePopup() {
+  const modal = document.getElementById('popup-modal');
+  modal.style.display = 'none';
+}
+
+
 // Github data display
 /*
 async function getRepoList() {

@@ -237,10 +237,11 @@ meta<!DOCTYPE html>
             <div class="img">
               <img
                 onContextMenu="return false;"
-                loading="lazy"
+                loading="eager"
                 class="intro-img"
-                src="../img/profile.webp"
+                src="img/profile.jpeg"
                 alt="intro-image"
+                style ="width:400px; height:auto;"
               />
             </div>
           </div>
@@ -309,7 +310,44 @@ meta<!DOCTYPE html>
                     With <a href="https://doi.org/10.1145/3565287.3617633">ACM</a> & <a href="https://doi.org/10.1109/IOTSMS59855.2023.10325722">IEEE</a>
                   </h2>
                 </div>
+
+              <div>
+                <img
+                  loading="lazy"
+                  src="img/icon/leadership-icon.png"
+                  alt="leadership-icon"
+                  style="filter: invert(35%) sepia(90%) saturate(500%) hue-rotate(194deg);"
+                />
+                <h2>
+                  <span class="blue counter">05</span> <span class="blue">+</span> Leadership Roles: 
+                  <span onclick="openPopup('gdsc-popup')" class="blue">GDSC</span>,
+                  <span onclick="openPopup('siam-popup')" class="blue">SIAM</span>,
+                  <span onclick="openPopup('bokohacks-popup')" class="blue">Boko Hacks</span>,
+                  <span onclick="openPopup('jrmf-popup')" class="blue">JRMF</span>, & 
+                  <span onclick="openPopup('launchpad-popup')" class="blue">CS Launchpad</span>
+                  </ul>
+                </h2>
               </div>
+            
+              <div>
+                <h2>Conferences Attended</h2>
+                <ul>
+                  <li onclick="openPopup('conf1-popup')">Conference 1</li>
+                  <li onclick="openPopup('conf2-popup')">Conference 2</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Popup Modal Structure -->
+            <div id="popup-modal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <img id="popup-image" src="" alt="Popup Image" />
+                <p id="popup-details"></p>
+              </div>
+            </div>
+          </div>
+
               <div class="right">
                 <h2>
                   What are my strongest sides

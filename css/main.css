@@ -153,7 +153,7 @@ h6 {
 
 .blue {
   color: hsl(194, 94%, 49%);
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 900;
 }
 
@@ -527,6 +527,8 @@ h6 {
   font-weight: 900;
 }
 
+/* Removing for now due to issues with integration with images.
+
 #intro .img img {
   width: 100%;
   position: relative;
@@ -538,7 +540,7 @@ h6 {
   mask-size: contain;
   border-radius: 4px;
   cursor: grab;
-}
+}*/
 
 #about {
   padding-top: 50px;
@@ -547,7 +549,7 @@ h6 {
 }
 
 .about-wrapper .left h2 {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .about-wrapper .right h2 {
@@ -577,7 +579,7 @@ h6 {
 
 #bio h2 {
   margin-top: 25px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 #bio .img {
@@ -1350,9 +1352,26 @@ footer .support ul li a:hover {
   }
 
   #intro .img {
-    width: 100%;
+    width: 400%;
     height: fit-content;
     margin: 0 auto;
+  }
+
+  #intro .img img {
+    width: 400%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image circular if desired */
+    position: relative;
+    z-index: 2; /* Place image above any background effects */
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%); /* Fading effect */
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-size: cover; /* Cover the entire image */
+    -webkit-mask-size: cover; /* For Safari */
+  }
+  
+  /* Optional: Adding a subtle shadow for flair */
+  #intro .img img {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow around the image */
   }
 
   #bio .img .bio-img {
@@ -1789,7 +1808,7 @@ footer .support ul li a:hover {
 
   #bio h2 {
     margin-top: 0px;
-    font-size: 30px;
+    font-size: 20px;
   }
 
   #about .section-title::before {
@@ -1977,7 +1996,7 @@ footer .support ul li a:hover {
 
   .blue {
     color: hsl(194, 94%, 49%);
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 900;
   }
 
@@ -2045,3 +2064,41 @@ footer .support ul li a:hover {
     color: hsl(194, 94%, 49%);
   }
 }
+
+/* For popup windows for experiences*/
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
