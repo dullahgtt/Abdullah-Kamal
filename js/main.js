@@ -779,7 +779,7 @@ function progressIndicator() {
 setTimeout(() => {
   new Typewriter(".typing-text", {
     strings: [
-      "Machine Learning Engineer",
+      "ML Engineer",
       "Drone Enthusiast",
       "Leader",
       "Cat Lover",
@@ -884,7 +884,7 @@ const projectData = [
     title: "Credit Card Fraud Detection",
     subTitle:
       "Detecting misuse of credit cards using supervised learning",
-    thumbnail: "../img/thumbnails/creditcard.png",
+    thumbnail: "../img/thumbnails/creditcard.jpg",
     description:
       "Utilized various supervised learning algorithms and oversampling to test the predictability of credit card scams using sample set of registered scams.",
     techStack: ["Python"],
