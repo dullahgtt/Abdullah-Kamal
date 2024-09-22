@@ -1029,8 +1029,7 @@ h6 {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  filter: invert(96%) sepia(75%) saturate(913%) hue-rotate(53deg)
-    brightness(89%) contrast(83%);
+  filter: invert(35%) sepia(100%) saturate(1000%) hue-rotate(180deg) brightness(85%) contrast(95%);
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -1057,9 +1056,8 @@ h6 {
   background-image: url("../img/icon/linkedin.png");
 }
 .col3 .email {
-  background-image: url("../img/icon/gmail.png");
+  background-image: url("../img/icon/google.png");
 }
-
 
 #intro .button {
   color: white;
