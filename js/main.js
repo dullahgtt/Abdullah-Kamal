@@ -884,7 +884,7 @@ const projectData = [
     title: "Credit Card Fraud Detection",
     subTitle:
       "Detecting misuse of credit cards using supervised learning",
-    thumbnail: "../img/thumbnails/creditcard.jpg",
+    thumbnail: "img/thumbnails/creditcard.jpg",
     description:
       "Utilized various supervised learning algorithms and oversampling to test the predictability of credit card scams using sample set of registered scams.",
     techStack: ["Python"],
@@ -893,7 +893,7 @@ const projectData = [
   {
     title: "Drone Battery Simulator",
     subTitle: "Carbon footprint tracking of battery consumption in recreation drones.",
-    thumbnail: "../img/thumbnails/dronemotion.png",
+    thumbnail: "img/thumbnails/dronemotion.png",
     description:
       "This project was utilized a Rhyze Tech Tello Drone simulation to track battery consumption, predict carbon footprint, and recommend optimal paths using A star based on desired waypoints",
     techStack: ["Python", "HTML"],
@@ -903,7 +903,7 @@ const projectData = [
     title: "U.S. County Political Perception Drift",
     subTitle:
       "Reimagining data architecture using sentiment-based analysis.",
-    thumbnail: "../img/thumbnails/politics.png",
+    thumbnail: "img/thumbnails/politics.png",
     description:
       "Utilizing deep learning to understand trend setting in political parties in the United States. Our solution implements oriented hypergraphs to understand the power of sentiment in major elections.",
     techStack: ["R", "Python", "Latex"],
@@ -912,7 +912,7 @@ const projectData = [
   {
     title: "Speaker Diarization via Clustering on CNNs",
     subTitle: "Gain insights and strengthen your GitHub connections",
-    thumbnail: "../img/thumbnails/diarization.png",
+    thumbnail: "img/thumbnails/diarization.png",
     description:
       "A research project designed to analyze various clustering methods to enhance speaker recognition for video transcription. We primarily are utilizing convolutional neural networks and PCA-Kmeans to predict speakers in various audio settings.",
     techStack: ["MATLAB", "Latex", "Python"],
@@ -922,7 +922,7 @@ const projectData = [
     title: "Image Recognition for Detecting Misinformation (IRDM)",
     subTitle:
       "Dynamic solution for detecting fake news on X (Formerly Twitter).",
-    thumbnail: "../img/thumbnails/fakenews.jpg",
+    thumbnail: "img/thumbnails/fakenews.jpg",
     description:
       "IRDM was designed to enhance fake news detection using a web scraper to cross-reference information with news outlet databases.",
     techStack: ["Python", "HTML", "CSS"],
@@ -931,7 +931,7 @@ const projectData = [
   {
     title: "Regulating Autonomous Drone Fly-Overs Via Authorization-based Zoning​",
     subTitle: "Security-based drone delivery system.",
-    thumbnail: "../img/thumbnails/drone2.png",
+    thumbnail: "img/thumbnails/drone2.png",
     description:
       "ABAC Android application designed to support private property protection for drone flyovers in urban areas.",
     techStack: ["Java", "JavaScript", "Python", "PHP", "Powershell", "Shell", "HTML", "CSS", "SCSS"],
@@ -941,7 +941,7 @@ const projectData = [
     title: "Cleetus: The Insult Bot",
     subTitle:
       "API-integrated insult-generating chat bot.",
-    thumbnail: "../img/thumbnails/lovenothate.jpg",
+    thumbnail: "img/thumbnails/lovenothate.jpg",
     description:
       "A web based application designed for humorous generation of insults.",
     techStack: ["Python", "HTML", "CSS", "React", "SQLAlchemy"],
