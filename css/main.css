@@ -131,7 +131,7 @@ textarea:focus {
 }
 
 .btn-outline-success:hover {
-  background-color: #4ea156;
+  background-color: hsl(194, 94%, 49%);
 }
 
 h1 {
@@ -1051,13 +1051,13 @@ h6 {
 }
 
 .col3 .github {
-  background-image: url("/img/icon/github.png");
+  background-image: url("../img/icon/github.png");
 }
 .col3 .linkedin {
-  background-image: url("/img/icon/linkedin.png");
+  background-image: url("../img/icon/linkedin.png");
 }
 .col3 .email {
-  background-image: url("/img/icon/gmail.png");
+  background-image: url("../img/icon/gmail.png");
 }
 
 
@@ -1221,7 +1221,7 @@ footer .support ul li a:hover {
 }
 
 #heart-icon {
-  color: red;
+  color: rgb(255, 98, 0);
 }
 
 .to-top {
