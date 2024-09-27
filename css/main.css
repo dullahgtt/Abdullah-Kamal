@@ -1060,6 +1060,15 @@ h6 {
 .col3 .email {
   background-image: url("../img/icon/google.png");
 }
+.col3 .scholar {
+  background-image: url("../img/icon/scholar.png");
+}
+.col3 .orcid {
+  background-image: url("../img/icon/orcid.png");
+}
+.col3 .instagram {
+  background-image: url("../img/icon/instagram.png");
+}
 
 #intro .button {
   color: white;
