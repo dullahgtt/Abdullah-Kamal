@@ -294,7 +294,7 @@ meta<!DOCTYPE html>
                   />
                   <h2>
                     <span class="blue counter">07</span
-                    ><span class="blue">+</span> Projects Completed
+                    > + Projects Completed
                   </h2>
                 </div>
                 <div>
@@ -306,7 +306,7 @@ meta<!DOCTYPE html>
                   />
                   <h2>
                     <span class="blue counter">02</span>
-                    <span class="blue"> Publications</span>
+                    Publications
                     With <a href="https://doi.org/10.1145/3565287.3617633">ACM</a> & <a href="https://doi.org/10.1109/IOTSMS59855.2023.10325722">IEEE</a>
                   </h2>
                 </div>
@@ -314,31 +314,38 @@ meta<!DOCTYPE html>
               <div>
                 <img
                   loading="lazy"
-                  src="img/icon/leadership-icon.png"
+                  src="img/icon/leadership.png"
                   alt="leadership-icon"
-                  style="filter: invert(35%) sepia(90%) saturate(500%) hue-rotate(194deg);"
+                  style="filter: invert(55%) sepia(90%) saturate(200%) hue-rotate(194deg);"
                 />
                 <h2>
-                  <span class="blue counter">05</span> <span class="blue">+</span> Leadership Roles: 
-                  <span onclick="openPopup('gdsc-popup')" class="blue">GDSC</span>,
-                  <span onclick="openPopup('siam-popup')" class="blue">SIAM</span>,
-                  <span onclick="openPopup('bokohacks-popup')" class="blue">Boko Hacks</span>,
-                  <span onclick="openPopup('jrmf-popup')" class="blue">JRMF</span>, & 
-                  <span onclick="openPopup('launchpad-popup')" class="blue">CS Launchpad</span>
-                  </ul>
+                  <span class="blue counter">05</span> +<span onclick="openPopup('leadership-popup')" class="blue">Leadership</span> Roles 
                 </h2>
               </div>
             
               <div>
-                <h2>Conferences Attended</h2>
-                <ul>
-                  <li onclick="openPopup('conf1-popup')">Conference 1</li>
-                  <li onclick="openPopup('conf2-popup')">Conference 2</li>
-                </ul>
+                <img
+                loading="lazy"
+                src="img/icon/conference.png"
+                alt="leadership-icon"
+                style="filter: invert(55%) sepia(90%) saturate(200%) hue-rotate(194deg);"
+                />
+                <h2>
+                  <span onclick="openPopup('conference-popup')" class="blue">Conferences</span>and <span onclick="openPopup('research-popup')" class="blue">Research</span> Showcases
+                </h2>
               </div>
             </div>
             
-            <!-- Popup Modal Structure -->
+            <div id="popup-modal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <div id="popup-inner-content">
+                  <!-- Dynamic content will be loaded here based on the category -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Popup Modal Structure
             <div id="popup-modal" class="modal">
               <div class="modal-content">
                 <span class="close" onclick="closePopup()">&times;</span>
@@ -346,7 +353,7 @@ meta<!DOCTYPE html>
                 <p id="popup-details"></p>
               </div>
             </div>
-          </div>
+          </div> -->
 
               <div class="right">
                 <h2>

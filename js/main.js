@@ -1092,36 +1092,78 @@ function loadContent(projectData) {
 
 function openPopup(popupId) {
   const modal = document.getElementById('popup-modal');
-  const image = document.getElementById('popup-image');
-  const details = document.getElementById('popup-details');
+  const innerContent = document.getElementById('popup-inner-content');
 
-  // Set image and details based on the popupId
+  // Clear previous content
+  innerContent.innerHTML = '';
+
+  // Set content based on the popupId
   switch (popupId) {
-    case 'gdsc-popup':
-      image.src = 'img/icon/gdsc-details.png'; 
-      details.innerText = 'Details about GDSC...';
+    case 'leadership-popup':
+      innerContent.innerHTML = `
+        <h2>Leadership Roles</h2>
+        <div class="popup-grid">
+          <div class="popup-item">
+            <img src="img/gdsc1.png" alt="GDSC">
+            <p>GDSC - Google Developer Student Club</p>
+          </div>
+          <div class="popup-item">
+            <img src="img/siam.png" alt="SIAM">
+            <p>SIAM - Society for Industrial and Applied Mathematics</p>
+          </div>
+          <div class="popup-item">
+            <img src="img/exe.png" alt=".EXE">
+            <p>.EXE - Computer Science Organization</p>
+          </div>
+          <div class="popup-item">
+            <img src="img/sme.png" alt="SME">
+            <p>SME - Society of Manufacturing Engineers</p>
+          </div>
+          <div class="popup-item">
+            <img src="img/hkn.png" alt="HKN">
+            <p>HKN - IEEE Honor Society</p>
+          </div>
+        </div>
+      `;
       break;
-    case 'siam-popup':
-      image.src = 'img/icon/siam-details.png';
-      details.innerText = 'Details about SIAM...';
+
+    case 'conference-popup':
+      innerContent.innerHTML = `
+        <h2>Conferences Attended</h2>
+        <div class="popup-grid">
+          <div class="popup-item">
+            <img src="img/conference1.png" alt="Conference 1">
+            <p>Conference 1 - Details about the event...</p>
+          </div>
+          <div class="popup-item">
+            <img src="img/conference2.png" alt="Conference 2">
+            <p>Conference 2 - Details about the event...</p>
+          </div>
+        </div>
+      `;
       break;
-    case 'bokohacks-popup':
-      image.src = 'img/icon/bokohacks-details.png';
-      details.innerText = 'Details about Boko Hacks...';
+
+    case 'research-popup':
+      innerContent.innerHTML = `
+        <h2>Research Showcases</h2>
+        <div class="popup-grid">
+          <div class="popup-item">
+            <img src="img/research1.png" alt="Research 1">
+            <p>Research Paper 1 - Topic details...</p>
+          </div>
+          <div class="popup-item">
+            <img src="img/research2.png" alt="Research 2">
+            <p>Research Paper 2 - Topic details...</p>
+          </div>
+        </div>
+      `;
       break;
-    case 'jrmf-popup':
-      image.src = 'img/icon/jrmf-details.png';
-      details.innerText = 'Details about JRMF...';
-        break;
-    case 'launchpad-popup':
-      image.src = 'img/icon/launchpad-details.png';
-      details.innerText = 'Details about CS Launchpad...';
-        break;
+
     default:
-      image.src = '';
-      details.innerText = '';
+      innerContent.innerHTML = '';
   }
 
+  // Show the modal
   modal.style.display = 'block';
 }
 
@@ -1129,6 +1171,7 @@ function closePopup() {
   const modal = document.getElementById('popup-modal');
   modal.style.display = 'none';
 }
+
 
 
 // Github data display
