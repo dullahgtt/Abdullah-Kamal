@@ -1090,101 +1090,104 @@ function loadContent(projectData) {
   });
 }
 
-function openPopup(popupId) {
-  const modal = document.getElementById('popup-modal');
-  const innerContent = document.getElementById('popup-inner-content');
+// Leadership and conference content arrays
+const leadershipContent = [
+  { image: 'img/gdsc1.png', details: 'Details about GDSC Leadership...' },
+  { image: 'img/leadership2.png', details: 'Details about XYZ Leadership...' },
+  // Add more leadership experiences as needed
+];
 
-  // Clear previous content
-  innerContent.innerHTML = '';
+const conferenceContent = [
+  { image: 'img/gdsc2.jpeg', details: 'Details about CS Launchpad Conference...' },
+  { image: 'img/conference2.png', details: 'Details about ABC Conference...' },
+  // Add more conference experiences as needed
+];
 
-  // Set content based on the popupId
-  switch (popupId) {
-    case 'leadership-popup':
-      innerContent.innerHTML = `
-        <h2>Leadership Roles</h2>
-        <div class="popup-grid">
-          <div class="popup-item">
-            <img src="img/gdsc1.png" alt="GDSC">
-            <p>GDSC - Google Developer Student Club</p>
-          </div>
-          <div class="popup-item">
-            <img src="img/siam.png" alt="SIAM">
-            <p>SIAM - Society for Industrial and Applied Mathematics</p>
-          </div>
-          <div class="popup-item">
-            <img src="img/exe.png" alt=".EXE">
-            <p>.EXE - Computer Science Organization</p>
-          </div>
-          <div class="popup-item">
-            <img src="img/sme.png" alt="SME">
-            <p>SME - Society of Manufacturing Engineers</p>
-          </div>
-          <div class="popup-item">
-            <img src="img/hkn.png" alt="HKN">
-            <p>HKN - IEEE Honor Society</p>
-          </div>
-        </div>
-      `;
-      break;
+// Current indices for navigation
+let currentLeadershipIndex = 0;
+let currentConferenceIndex = 0;
 
-    case 'conference-popup':
-      innerContent.innerHTML = `
-        <h2>Conferences Attended</h2>
-        <div class="popup-grid">
-          <div class="popup-item">
-            <img src="img/conference1.png" alt="Conference 1">
-            <p>Conference 1 - Details about the event...</p>
-          </div>
-          <div class="popup-item">
-            <img src="img/conference2.png" alt="Conference 2">
-            <p>Conference 2 - Details about the event...</p>
-          </div>
-        </div>
-      `;
-      break;
+// Function to open a popup and close any other open popups
+function openPopup(popupId, index) {
+  // Close all other popups
+  closeAllPopups();
 
-    case 'research-popup':
-      innerContent.innerHTML = `
-        <h2>Research Showcases</h2>
-        <div class="popup-grid">
-          <div class="popup-item">
-            <img src="img/research1.png" alt="Research 1">
-            <p>Research Paper 1 - Topic details...</p>
-          </div>
-          <div class="popup-item">
-            <img src="img/research2.png" alt="Research 2">
-            <p>Research Paper 2 - Topic details...</p>
-          </div>
-        </div>
-      `;
-      break;
+  // Select the modal to open
+  const modal = document.getElementById(popupId);
 
-    default:
-      innerContent.innerHTML = '';
+  // Update content based on popup type
+  if (popupId === 'leadership-popup') {
+    currentLeadershipIndex = index;
+    updatePopupContent('leadership');
+  } else if (popupId === 'conference-popup') {
+    currentConferenceIndex = index;
+    updatePopupContent('conference');
   }
 
-  // Show the modal
-  modal.style.display = 'block';
+  // Show the popup with a fade-in effect
+  modal.classList.add('show');
 }
 
-function closePopup() {
-  const modal = document.getElementById('popup-modal');
-  modal.style.display = 'none';
+// Function to close a specific popup
+function closePopup(popupId) {
+  const modal = document.getElementById(popupId);
+  modal.classList.remove('show'); // Close with fade-out
 }
 
+// Function to close all open popups
+function closeAllPopups() {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => modal.classList.remove('show'));
+}
 
+// Optional: Close popup when clicking outside the modal content
+window.onclick = function(event) {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    if (event.target === modal) {
+      modal.classList.remove('show');
+    }
+  });
+}
 
-// Github data display
-/*
-async function getRepoList() {
-  try {
-    const response = await fetch(
-      "https://api.github.com/users/LakshanRukantha/repos"
-    );
-    const data = await response.json();
-    return data;
-  } catch (err) {
-    console.log(err);
+// Function to navigate within the popup content
+function navigatePopup(type, direction) {
+  if (type === 'leadership') {
+    currentLeadershipIndex += direction;
+    if (currentLeadershipIndex < 0) {
+      currentLeadershipIndex = leadershipContent.length - 1;
+    } else if (currentLeadershipIndex >= leadershipContent.length) {
+      currentLeadershipIndex = 0;
+    }
+    updatePopupContent('leadership');
+  } else if (type === 'conference') {
+    currentConferenceIndex += direction;
+    if (currentConferenceIndex < 0) {
+      currentConferenceIndex = conferenceContent.length - 1;
+    } else if (currentConferenceIndex >= conferenceContent.length) {
+      currentConferenceIndex = 0;
+    }
+    updatePopupContent('conference');
   }
 }
-*/
+
+// Function to update the popup content
+function updatePopupContent(type) {
+  let content, imageElement, detailsElement;
+
+  if (type === 'leadership') {
+    content = leadershipContent[currentLeadershipIndex];
+    imageElement = document.getElementById('leadership-image');
+    detailsElement = document.getElementById('leadership-details');
+  } else if (type === 'conference') {
+    content = conferenceContent[currentConferenceIndex];
+    imageElement = document.getElementById('conference-image');
+    detailsElement = document.getElementById('conference-details');
+  }
+
+  // Update the popup content
+  if (imageElement && detailsElement && content) {
+    imageElement.src = content.image;
+    detailsElement.textContent = content.details;
+  }
+}

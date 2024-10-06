@@ -311,49 +311,57 @@ meta<!DOCTYPE html>
                   </h2>
                 </div>
 
-              <div>
-                <img
-                  loading="lazy"
-                  src="img/icon/leadership.png"
-                  alt="leadership-icon"
-                  style="filter: invert(55%) sepia(90%) saturate(200%) hue-rotate(194deg);"
-                />
-                <h2>
-                  <span class="blue counter">05</span> +<span onclick="openPopup('leadership-popup')" class="blue">Leadership</span> Roles 
-                </h2>
-              </div>
-            
-              <div>
-                <img
-                loading="lazy"
-                src="img/icon/conference.png"
-                alt="leadership-icon"
-                style="filter: invert(55%) sepia(90%) saturate(200%) hue-rotate(194deg);"
-                />
-                <h2>
-                  <span onclick="openPopup('conference-popup')" class="blue">Conferences</span>and <span onclick="openPopup('research-popup')" class="blue">Research</span> Showcases
-                </h2>
-              </div>
+            <div class="leadership-section">
+              <img loading="lazy" src="img/icon/leadership.png" alt="leadership-icon" style="filter: invert(55%) sepia(90%) saturate(200%) hue-rotate(194deg);"/>
+              <h2>
+                <span class="blue counter">05</span> +
+                <span onclick="openPopup('leadership-popup', 0)" class="blue">Leadership Roles</span>
+              </h2>
             </div>
-            
-            <div id="popup-modal" class="modal">
-              <div class="modal-content">
-                <span class="close" onclick="closePopup()">&times;</span>
-                <div id="popup-inner-content">
-                  <!-- Dynamic content will be loaded here based on the category -->
-                </div>
-              </div>
+        
+            <div class="conference-section">
+              <img loading="lazy" src="img/icon/conference.png" alt="conference-icon" style="filter: invert(55%) sepia(90%) saturate(200%) hue-rotate(194deg);"/>
+              <h2>
+                <span onclick="openPopup('conference-popup', 0)" class="blue">Conferences</span>
+                and
+                <span onclick="openPopup('research-popup', 0)" class="blue">Research</span> Showcases
+              </h2>
             </div>
 
-            <!-- Popup Modal Structure
-            <div id="popup-modal" class="modal">
-              <div class="modal-content">
-                <span class="close" onclick="closePopup()">&times;</span>
-                <img id="popup-image" src="" alt="Popup Image" />
-                <p id="popup-details"></p>
+            
+          <!-- Leadership Popup Modal Structure -->
+          <div id="leadership-popup" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closePopup('leadership-popup')">&times;</span>
+              
+              <div class="popup-content">
+                <img id="leadership-image" src="" alt="Leadership Image" />
+                <p id="leadership-details"></p>
+              </div>
+
+              <div class="navigation-arrows">
+                <span class="left-arrow" onclick="navigatePopup('leadership', -1)">&#10094;</span>
+                <span class="right-arrow" onclick="navigatePopup('leadership', 1)">&#10095;</span>
               </div>
             </div>
-          </div> -->
+          </div>
+
+          <!-- Conference Popup Modal Structure -->
+          <div id="conference-popup" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closePopup('conference-popup')">&times;</span>
+              
+              <div class="popup-content">
+                <img id="conference-image" src="" alt="Conference Image" />
+                <p id="conference-details"></p>
+              </div>
+
+              <div class="navigation-arrows">
+                <span class="left-arrow" onclick="navigatePopup('conference', -1)">&#10094;</span>
+                <span class="right-arrow" onclick="navigatePopup('conference', 1)">&#10095;</span>
+              </div>
+            </div>
+          </div>
 
               <div class="right">
                 <h2>
