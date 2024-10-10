@@ -1090,32 +1090,24 @@ function loadContent(projectData) {
   });
 }
 
-// Leadership and conference content arrays
 const leadershipContent = [
   { image: 'img/gdsc1.png', details: 'Details about GDSC Leadership...' },
   { image: 'img/leadership2.png', details: 'Details about XYZ Leadership...' },
-  // Add more leadership experiences as needed
 ];
 
 const conferenceContent = [
   { image: 'img/gdsc2.jpeg', details: 'Details about CS Launchpad Conference...' },
   { image: 'img/conference2.png', details: 'Details about ABC Conference...' },
-  // Add more conference experiences as needed
 ];
 
-// Current indices for navigation
 let currentLeadershipIndex = 0;
 let currentConferenceIndex = 0;
 
-// Function to open a popup and close any other open popups
 function openPopup(popupId, index) {
-  // Close all other popups
   closeAllPopups();
 
-  // Select the modal to open
   const modal = document.getElementById(popupId);
 
-  // Update content based on popup type
   if (popupId === 'leadership-popup') {
     currentLeadershipIndex = index;
     updatePopupContent('leadership');
@@ -1124,30 +1116,19 @@ function openPopup(popupId, index) {
     updatePopupContent('conference');
   }
 
-  // Show the popup with a fade-in effect
   modal.classList.add('show');
 }
 
-// Function to close a specific popup
 function closePopup(popupId) {
   const modal = document.getElementById(popupId);
-  modal.classList.remove('show'); // Close with fade-out
+  if (modal) {
+    modal.classList.remove('show');
+  }
 }
 
-// Function to close all open popups
 function closeAllPopups() {
   const modals = document.querySelectorAll('.modal');
   modals.forEach(modal => modal.classList.remove('show'));
-}
-
-// Optional: Close popup when clicking outside the modal content
-window.onclick = function(event) {
-  const modals = document.querySelectorAll('.modal');
-  modals.forEach(modal => {
-    if (event.target === modal) {
-      modal.classList.remove('show');
-    }
-  });
 }
 
 // Function to navigate within the popup content
