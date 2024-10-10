@@ -1119,6 +1119,17 @@ function openPopup(popupId, index) {
   modal.classList.add('show');
 }
 
+window.onclick = function(event) {
+  const modals = document.querySelectorAll('.modal');
+
+  modals.forEach(modal => {
+      // Check if the clicked target is outside the modal content
+      if (event.target === modal) {
+          closePopup(modal.id); // Call your function to close the modal
+      }
+  });
+};
+
 function closePopup(popupId) {
   const modal = document.getElementById(popupId);
   if (modal) {

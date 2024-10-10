@@ -2087,12 +2087,19 @@ footer .support ul li a:hover {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+  transition: transform 0.3s;  
+}
+
+.popup-content img:hover {
+  transform: scale(1.05);
 }
 
 .popup-content p {
-  font-size: 1rem; /* Smaller font size */
+  font-size: 2rem; /* Smaller font size */
   line-height: 1.5;
   color: #444; /* Softer text color */
+  margin: 10px 0;
+  font-family: 'Arial', sans-serif;
 }
 
 .navigation-arrows {
@@ -2117,7 +2124,6 @@ footer .support ul li a:hover {
   opacity: 0;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
   transition: opacity 0.4s ease, transform 0.4s ease;
   z-index: 1000;
 }
@@ -2125,7 +2131,7 @@ footer .support ul li a:hover {
 .modal.show {
   display: block;
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(0.8);
 }
 
 .modal.show::before {
@@ -2143,7 +2149,12 @@ footer .support ul li a:hover {
 .modal-content {
   position: relative;
   text-align: center;
-  z-index: 1001;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  max-width: 600px;
 }
 
 .modal .close {
