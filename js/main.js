@@ -1091,13 +1091,25 @@ function loadContent(projectData) {
 }
 
 const leadershipContent = [
-  { image: 'img/gdsc1.png', details: 'Details about GDSC Leadership...' },
-  { image: 'img/leadership2.png', details: 'Details about XYZ Leadership...' },
+  {
+    images: ['img/gdsc1.png', 'img/leadership2.png'],
+    details: 'Details about GDSC Leadership...'
+  },
+  {
+    images: ['img/leadership3.png', 'img/leadership4.png'],
+    details: 'Details about XYZ Leadership...'
+  },
 ];
 
 const conferenceContent = [
-  { image: 'img/gdsc2.jpeg', details: 'Details about CS Launchpad Conference...' },
-  { image: 'img/conference2.png', details: 'Details about ABC Conference...' },
+  {
+    images: ['img/gdsc2.jpeg', 'img/conference2.png'],
+    details: 'Details about CS Launchpad Conference...'
+  },
+  {
+    images: ['img/conference3.png', 'img/conference4.png'],
+    details: 'Details about ABC Conference...'
+  },
 ];
 
 let currentLeadershipIndex = 0;
@@ -1123,9 +1135,8 @@ window.onclick = function(event) {
   const modals = document.querySelectorAll('.modal');
 
   modals.forEach(modal => {
-      // Check if the clicked target is outside the modal content
       if (event.target === modal) {
-          closePopup(modal.id); // Call your function to close the modal
+          closePopup(modal.id);
       }
   });
 };
@@ -1142,7 +1153,6 @@ function closeAllPopups() {
   modals.forEach(modal => modal.classList.remove('show'));
 }
 
-// Function to navigate within the popup content
 function navigatePopup(type, direction) {
   if (type === 'leadership') {
     currentLeadershipIndex += direction;
@@ -1163,23 +1173,26 @@ function navigatePopup(type, direction) {
   }
 }
 
-// Function to update the popup content
 function updatePopupContent(type) {
-  let content, imageElement, detailsElement;
-
+  let contentArray;
   if (type === 'leadership') {
-    content = leadershipContent[currentLeadershipIndex];
-    imageElement = document.getElementById('leadership-image');
-    detailsElement = document.getElementById('leadership-details');
+    contentArray = leadershipContent;
   } else if (type === 'conference') {
-    content = conferenceContent[currentConferenceIndex];
-    imageElement = document.getElementById('conference-image');
-    detailsElement = document.getElementById('conference-details');
+    contentArray = conferenceContent;
   }
 
-  // Update the popup content
-  if (imageElement && detailsElement && content) {
-    imageElement.src = content.image;
-    detailsElement.textContent = content.details;
-  }
+  const imageGallery = document.querySelector(`#${type}-popup .image-gallery`);
+  imageGallery.innerHTML = ''; // Clear existing images
+
+  const currentContent = contentArray[type === 'leadership' ? currentLeadershipIndex : currentConferenceIndex];
+
+  currentContent.images.forEach((imageSrc) => {
+    const img = document.createElement('img');
+    img.src = imageSrc;
+    img.alt = `Image for ${type}`;
+    img.classList.add('popup-image');
+    imageGallery.appendChild(img);
+  });
+
+  document.getElementById(`${type}-details`).innerText = currentContent.details;
 }

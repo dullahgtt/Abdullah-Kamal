@@ -2083,11 +2083,24 @@ footer .support ul li a:hover {
   }
 }
 
-.popup-content img {
+.popup-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px; 
+}
+
+.popup-image {
   max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
-  transition: transform 0.3s;  
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .popup-content img:hover {
