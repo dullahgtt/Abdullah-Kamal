@@ -2092,15 +2092,18 @@ footer .support ul li a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 20px; 
+  gap: 30px;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
 .popup-image {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
-  margin: 10px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
 .popup-content img:hover {
@@ -2108,9 +2111,9 @@ footer .support ul li a:hover {
 }
 
 .popup-content p {
-  font-size: 2rem; /* Smaller font size */
+  font-size: 2rem;
   line-height: 1.5;
-  color: #444; /* Softer text color */
+  color: #444;
   margin: 10px 0;
   font-family: 'Arial', sans-serif;
 }

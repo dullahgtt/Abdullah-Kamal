@@ -1097,11 +1097,27 @@ const leadershipContent = [
   },
   {
     images: ['img/leadership3.png', 'img/leadership4.png'],
-    details: 'Details about XYZ Leadership...'
+    details: 'Details about SIAM Leadership...'
+  },
+  {
+    images: ['img/leadership3.png', 'img/leadership4.png'],
+    details: 'Details about .EXE Leadership...'
+  },
+  {
+    images: ['img/leadership3.png', 'img/leadership4.png'],
+    details: 'Details about HLSAMP Advisory Board Leadership...'
+  },
+  {
+    images: ['img/gdsc2.jpeg', 'img/leadership4.png'],
+    details: 'Details about CS Launchpad Leadership...'
+  },
+  {
+    images: ['img/leadership3.png', 'img/leadership4.png'],
+    details: 'Details about Boko Hacks Leadership...'
   },
 ];
 
-const conferenceContent = [
+/*const conferenceContent = [
   {
     images: ['img/gdsc2.jpeg', 'img/conference2.png'],
     details: 'Details about CS Launchpad Conference...'
@@ -1110,10 +1126,10 @@ const conferenceContent = [
     images: ['img/conference3.png', 'img/conference4.png'],
     details: 'Details about ABC Conference...'
   },
-];
+];*/
 
 let currentLeadershipIndex = 0;
-let currentConferenceIndex = 0;
+//let currentConferenceIndex = 0;
 
 function openPopup(popupId, index) {
   closeAllPopups();
@@ -1123,10 +1139,10 @@ function openPopup(popupId, index) {
   if (popupId === 'leadership-popup') {
     currentLeadershipIndex = index;
     updatePopupContent('leadership');
-  } else if (popupId === 'conference-popup') {
+  } /*else if (popupId === 'conference-popup') {
     currentConferenceIndex = index;
     updatePopupContent('conference');
-  }
+  }*/
 
   modal.classList.add('show');
 }
@@ -1162,7 +1178,7 @@ function navigatePopup(type, direction) {
       currentLeadershipIndex = 0;
     }
     updatePopupContent('leadership');
-  } else if (type === 'conference') {
+  } /*else if (type === 'conference') {
     currentConferenceIndex += direction;
     if (currentConferenceIndex < 0) {
       currentConferenceIndex = conferenceContent.length - 1;
@@ -1170,21 +1186,22 @@ function navigatePopup(type, direction) {
       currentConferenceIndex = 0;
     }
     updatePopupContent('conference');
-  }
+  }*/
 }
 
 function updatePopupContent(type) {
   let contentArray;
   if (type === 'leadership') {
     contentArray = leadershipContent;
-  } else if (type === 'conference') {
+  } /*else if (type === 'conference') {
     contentArray = conferenceContent;
-  }
+  }*/
 
   const imageGallery = document.querySelector(`#${type}-popup .image-gallery`);
-  imageGallery.innerHTML = ''; // Clear existing images
+  imageGallery.innerHTML = '';
 
-  const currentContent = contentArray[type === 'leadership' ? currentLeadershipIndex : currentConferenceIndex];
+  // Previously --  const currentContent = contentArray[type === 'leadership' ? currentLeadershipIndex : currentConferenceIndex];
+  const currentContent = contentArray[currentLeadershipIndex];
 
   currentContent.images.forEach((imageSrc) => {
     const img = document.createElement('img');
