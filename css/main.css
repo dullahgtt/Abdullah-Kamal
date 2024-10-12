@@ -2095,6 +2095,8 @@ footer .support ul li a:hover {
   gap: 30px;
   margin-bottom: 20px;
   padding: 20px;
+  overflow: auto;
+  max-width: 100%;
 }
 
 .popup-image {
@@ -2118,21 +2120,30 @@ footer .support ul li a:hover {
   font-family: 'Arial', sans-serif;
 }
 
-.navigation-arrows {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.left-arrow,
-.right-arrow {
+.left-arrow, .right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); 
+  background-color: rgba(0, 0, 0, 0.5); 
+  border: none;
+  color: white;
   font-size: 2rem;
+  padding: 10px;
   cursor: pointer;
+  z-index: 10;
+  border-radius: 50%; 
 }
 
-.left-arrow:hover,
-.right-arrow:hover {
-  color: hsl(32, 94%, 49%);
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px; 
+}
+
+.left-arrow:hover, .right-arrow:hover { 
+  background-color: hsl(194, 94%, 49%);
 }
 
 .modal {
@@ -2165,12 +2176,13 @@ footer .support ul li a:hover {
 .modal-content {
   position: relative;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #292929;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin: auto;
-  max-width: 600px;
+  max-width: 50%;
+  overflow-y: auto;
 }
 
 .modal .close {
@@ -2184,4 +2196,15 @@ footer .support ul li a:hover {
 
 .modal .close:hover {
   color: #ff0000;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .popup-image {
+    max-width: 90%;
+  }
 }
