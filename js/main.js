@@ -74,6 +74,10 @@ function toContact() {
   });
 }
 
+function toGallery() {
+  document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+}
+
 //Scrolling Progress Bar
 
 window.onscroll = function () {

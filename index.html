@@ -178,6 +178,12 @@ meta<!DOCTYPE html>
                 >Contact</a
               >
             </li>
+            <li class="nav-card-item">
+              <a 
+                class="nav-link js-scroll-trigger noselect" 
+                onclick="toGallery()"
+                >Gallery</a>
+            </li>            
           </ul>
           <a href="https://drive.google.com/file/d/1GxXMJHyjuzL4_pFYRF6YA3V9N4JUWBzS/view?usp=sharing"
             ><button type="button" class="cv-download noselect">
@@ -766,6 +772,66 @@ meta<!DOCTYPE html>
             transform="rotate(-180 720 200)"
           ></path>
         </svg>
+
+        <!-- Photo Gallery Section -->
+        <section id="gallery" class="text-center">
+          <div class="container" data-aos="fade-up" data-aos-duration="1000">
+            <h6 class="section-title">Gallery</h6>
+            <h3 class="gallery-label">Photo Collection</h3>
+            
+            <div class="gallery-container">
+              <!-- Gallery Item 1 -->
+              <div class="gallery-card">
+                <div class="gallery-image" style="background-image: url('path_to_image_1.jpg');" title="Image 1 Description">
+                  <div class="hover-info">
+                    <h4>Image 1 Title</h4>
+                    <p>Image 1 short description</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Gallery Item 2 -->
+              <div class="gallery-card">
+                <div class="gallery-image" style="background-image: url('path_to_image_2.jpg');" title="Image 2 Description">
+                  <div class="hover-info">
+                    <h4>Image 2 Title</h4>
+                    <p>Image 2 short description</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Gallery Item 3 -->
+              <div class="gallery-card">
+                <div class="gallery-image" style="background-image: url('path_to_image_3.jpg');" title="Image 3 Description">
+                  <div class="hover-info">
+                    <h4>Image 3 Title</h4>
+                    <p>Image 3 short description</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Add more gallery items as needed -->
+            </div>
+          </div>
+        </section>
+
+        <svg
+        width="100%"
+        height="100%"
+        id="svg"
+        viewBox="0 0 1440 400"
+        xmlns="http://www.w3.org/2000/svg"
+        class="transition duration-300 ease-in-out delay-150"
+      >
+        <path
+          d="M 0,500 C 0,500 0,250 0,250 C 53.5,275.4589743589744 107,300.9179487179487 202,290 C 297,279.0820512820513 433.5,231.7871794871795 519,219 C 604.5,206.2128205128205 638.9999999999999,227.93333333333334 710,242 C 781.0000000000001,256.06666666666666 888.5,262.4794871794872 968,272 C 1047.5,281.5205128205128 1099,294.14871794871794 1173,291 C 1247,287.85128205128206 1343.5,268.925641025641 1440,250 C 1440,250 1440,500 1440,500 Z"
+          stroke="none"
+          stroke-width="0"
+          fill="#222222ff"
+          class="transition-all duration-300 ease-in-out delay-150 path-0"
+        ></path>
+      </svg>
+
         <!-- Contact -->
         <section id="contact" class="text-center">
           <div class="container" data-aos="fade-up" data-aos-duration="1000">
