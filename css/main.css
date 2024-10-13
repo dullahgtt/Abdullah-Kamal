@@ -2125,15 +2125,19 @@ footer .support ul li a:hover {
   flex-wrap: wrap;
   gap: 30px;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 0;
   overflow: auto;
   max-width: 100%;
 }
 
+.modal-content, .image-gallery, .popup-image {
+  border: 1px solid red;
+}
+
 .popup-image {
-  max-width: 90%;
+  width: 100%;
   height: auto;
-  margin: 20px;
+  margin: 30px;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
@@ -2200,7 +2204,7 @@ footer .support ul li a:hover {
   left: 50%;
   width: auto;
   height: auto;
-  background-color: rgba(3, 59, 65, 0.5);
+  background-color: rgba(255, 109, 5, 0.5);
   z-index: 999;
 }
 
@@ -2226,7 +2230,7 @@ footer .support ul li a:hover {
 }
 
 .modal .close:hover {
-  color: #ff0000;
+  color: #ff9500;
 }
 
 @media (max-width: 768px) {
