@@ -590,7 +590,7 @@ h6 {
 
 #bio .img .bio-img {
   position: relative;
-  width: 100%;
+  width: 30%;
   cursor: grab;
   margin-bottom: 25px;
   border-left: 5px solid hsl(194, 94%, 49%);
