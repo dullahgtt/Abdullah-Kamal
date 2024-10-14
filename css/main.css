@@ -1391,29 +1391,44 @@ footer .support ul li a:hover {
     margin-bottom: 20px;
   }
 
-  #intro .img {
-    width: 400%;
-    height: fit-content;
+  #intro .img-container {
+    width: 100%;
+    max-width: 600px;
     margin: 0 auto;
-  }
-
-  #intro .img img {
-    width: 400%;
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Make the image circular if desired */
     position: relative;
-    z-index: 2; /* Place image above any background effects */
-    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%); /* Fading effect */
-    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-    mask-size: cover; /* Cover the entire image */
-    -webkit-mask-size: cover; /* For Safari */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
   }
   
-  /* Optional: Adding a subtle shadow for flair */
-  #intro .img img {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow around the image */
+  #intro .img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+    border-radius: 15px;
+    pointer-events: none;
   }
-
+  
+  #intro .intro-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #intro .intro-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  }
+  
   #bio .img .bio-img {
     position: relative;
     width: 100%;
