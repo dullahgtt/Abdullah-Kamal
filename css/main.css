@@ -597,6 +597,28 @@ h6 {
   border-radius: 8px;
 }
 
+.bio-img-container {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.bio-text {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bio-img-container:hover .bio-text {
+  opacity: 1;
+}
+
+
 .js-tilt-glare {
   border-radius: 8px;
 }
@@ -1429,7 +1451,7 @@ footer .support ul li a:hover {
     transform: scale(1.05);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 30px 15px hsl(33, 94%, 49%);
   }
-  
+
   #bio .img .bio-img {
     position: relative;
     width: 100%;

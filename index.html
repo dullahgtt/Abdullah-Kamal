@@ -240,16 +240,30 @@ meta<!DOCTYPE html>
               <a class="scroll noselect" onclick="toAbout()">Scroll Down</a>
             </div>
             <div class="img">
-              <div id="intro" class="img-container">
-                <img
-                  onContextMenu="return false;"
-                  loading="eager"
-                  class="intro-img"
-                  src="img/homepage.JPG"
-                  alt="intro-image"
-                />
-              </div>             
-            </div>
+              <div id="intro" class="img-container" style="text-align: center;">
+                <details>
+                  <summary>
+                    <img
+                      onContextMenu="return false;"
+                      loading="eager"
+                      class="intro-img"
+                      src="img/homepage.JPG"
+                      alt="intro-image"
+                      style="width: 400px; height: auto; margin: 40; padding: 0;"
+                    />
+                  </summary>
+                  <div style="text-align: center;">
+                    <div>Muslim</div>
+                    <div>Austinite (born and raised)</div>
+                    <div>Tech enthusiast</div>
+                    <div>Book lover</div>
+                    <div>Outdoorsy</div>
+                    <div>Cat lover</div>
+                    <div>Star Wars & GOT for life</div>
+                  </div>
+                </details>
+              </div>
+            </div>            
           </div>
         </section>
         <svg
@@ -391,24 +405,39 @@ meta<!DOCTYPE html>
             <h6 class="section-title">Who am I?</h6>
             <div class="bio">
               <div class="img">
-                <img
-                  loading="lazy"
-                  class="bio-img"
-                  src="./img/bio1.JPG"
-                  alt="photo-bio"
-                />
-                <img
-                loading="lazy"
-                class="bio-img"
-                src="./img/bio2.jpg"
-                alt="photo-bio"
-                />
-                <img
-                loading="lazy"
-                class="bio-img"
-                src="./img/bio3.jpg"
-                alt="photo-bio"
-                />
+                <div class="bio-img-container">
+                  <img
+                    loading="lazy"
+                    class="bio-img"
+                    src="./img/bio1.JPG"
+                    alt="photo-bio"
+                  />
+                  <div class="bio-text">
+                    <p>IEEE HKN-MU Chapter induction ceremony at Texas State University.</p>
+                  </div>
+                </div>
+                <div class="bio-img-container">
+                  <img
+                    loading="lazy"
+                    class="bio-img"
+                    src="./img/bio2.jpg"
+                    alt="photo-bio"
+                  />
+                  <div class="bio-text">
+                    <p>College of Science and Engineering Industry Advisory Board Research Schowcase at Texas State University.</p>
+                  </div>
+                </div>
+                <div class="bio-img-container">
+                  <img
+                    loading="lazy"
+                    class="bio-img"
+                    src="./img/bio3.jpg"
+                    alt="photo-bio"
+                  />
+                  <div class="bio-text">
+                    <p>Graduating Summa Cum Laude with a double Bachelors of Science in CS and Applied Math.</p>
+                  </div>
+                </div>
               </div>
               <div class="text">
                 <h2>
