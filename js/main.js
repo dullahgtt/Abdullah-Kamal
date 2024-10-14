@@ -1096,27 +1096,27 @@ function loadContent(projectData) {
 
 const leadershipContent = [
   {
-    images: ['img/gdsc1.png', 'img/leadership2.png'],
+    images: ['img/gdsc1.png'],
     details: 'Leading the Google Developer Student Club at Texas State as Vice President, I led a team of dedicated leaders, working directly with industry leaders to host workshops and programs primarily in machine learning. Through GDSC, I co-founded and led events like the Computer Science Launch Pad and the Boko Hacks hackathon.'
   },
   {
-    images: ['img/leadership3.png', 'img/leadership4.png'],
+    images: ['img/siam4.jpg', 'img/siam1.jpg'],
     details: 'I co-founded the Society for Industrial and Applied Mathematics at Texas State, acting as Liaison to the national organization, leading efforts to empower the next generation of mathematicians through technical workshops and leadership initiatives. I directed the first Julia Robinson Math Festival at Texas State through this position. '
   },
   {
-    images: ['img/leadership3.png', 'img/leadership4.png'],
+    images: ['img/exe1.jpg'],
     details: 'As Marketing Director, I worked directly with CS club leadership and department administration to build a budding online presence on leading platforms like LinkedIn, Discord, GroupMe, and Instagram.'
   },
   {
-    images: ['img/leadership3.png', 'img/leadership4.png'],
+    images: ['img/advisoryboard2.jpg', 'img/advisoryboard.jpg'],
     details: 'From Founding Advertisement Chair to Co Chair of the H-LSAMP Advisory Board, I helped build a strong community within the LSAMP program at Texas State, leading a team of driven Board members to empower recruits and diversify perspective. I co-created the H-LSAMP promotional video and Instagram with Co Chair Michala Gradner.'
   },
   {
-    images: ['img/gdsc2.jpeg', 'img/leadership4.png'],
+    images: ['img/launchpad1.jpeg'],
     details: 'The Computer Science Launch Pad was created as an effort to help freshmen understand the opportunities and struggles within their field, through keynotes, talks, workshops, panels, and booths. Co-founding and directing the event proved a fruitful endeavor to bring together the next generation of technlogists. I currently act as Advisor to the Director, providing guidance into industry sponsorships and managerial methods.'
   },
   {
-    images: ['img/leadership3.png', 'img/leadership4.png'],
+    images: ['img/bokohacks3.jpg', 'img/bokohacks2.jpg'],
     details: 'I co-founded the Boko Hacks hackathon as the first student led and directed cybersecurity hackathon at Texas State. Leveraging personal contacts, our team secured sponsorships from Microsoft, IEEE, and KC7, with many hundred people attending our one day event. I currently sit on the Board of Directors for upcoming Boko Hacks events.'
   },
 ];
