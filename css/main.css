@@ -2161,11 +2161,12 @@ footer .support ul li a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 15px;
   margin-bottom: 20px;
   padding: 0;
   overflow: auto;
   max-width: 100%;
+  max-height: 50vh;
 }
 
 /*
@@ -2175,9 +2176,9 @@ footer .support ul li a:hover {
 */
 
 .popup-image {
-  width: 100%;
+  max-width: 90%;
   height: auto;
-  margin: 30px;
+  margin: 25px;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
@@ -2257,7 +2258,15 @@ footer .support ul li a:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin: auto;
   max-width: 50%;
+  display: flex;
   overflow-y: auto;
+  justify-content: space-between;
+}
+
+.modal-details {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
 }
 
 .modal .close {
@@ -2276,11 +2285,15 @@ footer .support ul li a:hover {
 @media (max-width: 768px) {
   .modal-content {
     max-width: 90%;
-    padding: 15px;
+    padding: 10px;
   }
 
   .popup-image {
-    max-width: 90%;
+    max-width: auto;
+  }
+
+  .image-gallery {
+    gap: 10px;
   }
 }
 
@@ -2346,4 +2359,38 @@ footer .support ul li a:hover {
 #gallery p {
   font-size: 14px;
   line-height: 1.5;
+}
+
+.poster-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto;
+}
+
+.poster-modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%; 
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  border: 5px solid rgb(41, 41, 41);
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: hsl(194, 94%, 49%);
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
 }

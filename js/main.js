@@ -1217,3 +1217,17 @@ function updatePopupContent(type) {
 
   document.getElementById(`${type}-details`).innerText = currentContent.details;
 }
+
+function openPosterModal(imageSrc) {
+  var modal = document.getElementById("posterModal");
+  var modalImage = document.getElementById("posterModalImage");
+
+  modal.style.display = "block"; // Show the modal
+  modalImage.src = imageSrc; // Set the source of the image
+}
+
+function closePosterModal() {
+  var modal = document.getElementById("posterModal");
+  modal.style.display = "none"; // Hide the modal
+}
+

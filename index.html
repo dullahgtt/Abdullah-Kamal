@@ -331,13 +331,13 @@ meta<!DOCTYPE html>
                   </h2>
                 </div>
 
-            <div class="leadership-section">
-              <img loading="lazy" src="img/icon/leadership.png" alt="leadership-icon" style="filter: invert(55%) sepia(90%) saturate(200%) hue-rotate(194deg);"/>
-              <h2>
-                <span class="blue counter">06</span> +
-                <span onclick="openPopup('leadership-popup', 0)" class="blue">Leadership </span>Roles
-              </h2>
-            </div>
+                <div class="leadership-section">
+                  <img loading="lazy" src="img/icon/leadership.png" alt="leadership-icon" style="filter: invert(55%) sepia(90%) saturate(200%) hue-rotate(194deg);"/>
+                  <h2>
+                      <span class="blue counter">06</span> +
+                      <span onclick="openPopup('leadership-popup', 0)" class="blue">Leadership</span> Roles
+                  </h2>
+              </div>
             <!--
             <div class="conference-section">
               <img loading="lazy" src="img/icon/conference.png" alt="conference-icon" style="filter: invert(55%) sepia(90%) saturate(200%) hue-rotate(194deg);"/>
@@ -883,22 +883,27 @@ meta<!DOCTYPE html>
                   </div>
                 </div>
               </div>
-              
-              <!-- Testing idea for Poster Section. NOT YET IMPLEMENTED!!!
 
-              <h3 class="gallery-label">Posters</h3>
+          </div>
 
-              <div class="gallery-card">
+          <h3 class="gallery-label">Posters</h3>
+
+          <div class="gallery-container">
+              <div class="gallery-card" onclick="openPosterModal('img/Gallery/poster1.jpg')">                  
                 <div class="gallery-image" style="background-image: url('img/Gallery/poster1.jpg');" title="Speaker Diarization for Video Transcription">
-                  <div class="hover-info">
-                    <h4>Speaker Diarization for Video Transcription</h4>
-                    <p>Testing clustering algorithms on deep learning to determine most effective way to differentiate speakers in audios.</p>
+                    <div class="hover-info">
+                      <p>Testing clustering algorithms on deep learning to determine most effective way to differentiate speakers in audios.</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            -->
-
             </div>
+
+            <div id="posterModal" class="poster-modal" onclick="closePosterModal()">
+              <span class="close" onclick="closePosterModal()">&times;</span>
+              <img class="poster-modal-content" id="posterModalImage">
+              <div id="posterCaption" class="poster-caption"></div>
+          </div>
+
           </div>
         </section>
 
