@@ -851,35 +851,35 @@ VanillaTilt.init(document.querySelector(".bio-img"), {
 
 var form = document.getElementById("contact-form");
 
-async function handleSubmit(event) {
-  event.preventDefault();
-  var status = document.getElementById("status");
-  var data = new FormData(event.target);
-  fetch(event.target.action, {
-    method: form.method,
-    body: data,
-    headers: {
-      Accept: "application/json",
-    },
-  })
-    .then((response) => {
-      swal({
-        title: "Thank You!",
-        text: "Your message sent successfully. I'll get back to you soon!",
-        icon: "success",
-      });
-      form.reset();
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
     })
-    .catch((error) => {
-      swal({
-        title: "Oops!",
-        text: "There was a problem with sending the message. Please refresh the page and try again later.",
-        icon: "error",
+      .then((response) => {
+        swal({
+          title: "Thank You!",
+          text: "Your message was sent successfully. I'll get back to you soon!",
+          icon: "success",
+        });
+        form.reset();
+      })
+      .catch((error) => {
+        swal({
+          title: "Oops!",
+          text: "There was a problem with sending the message. Please try again later.",
+          icon: "error",
+        });
+        form.reset();
       });
-      form.reset();
-    });
-}
-form.addEventListener("submit", handleSubmit);
+  }
+
+  form.addEventListener("submit", handleSubmit);
 
 // projects section
 
